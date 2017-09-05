@@ -1,9 +1,23 @@
-<div class="container">
-<form action="/" method="POST" id="form">
-<p><input type="file" name="image" /></p>
-<p><input type="text" name="title" /></p>
-<p><textarea name="description"></textarea></p>
-<p><input type="text" name="price" /></p>
-<p><input type="submit" value="追加" /></p>
+<?php use Phalcon\Tag; ?>
+
+<?php echo Tag::form(''); ?>
+<p>
+	<lable for="image">商品画像</label>
+	<?php echo Tag::fileField('image') ?>
+</p>
+<p>
+	<lable for="title">商品タイトル</label>
+	<?php echo Tag::textField('title') ?>
+</p>
+<p>
+	<lable for="description">説明文</label>
+	<?php echo Tag::textArea('description') ?>
+</p>
+<p>
+	<lable for="price">価格</label>
+	<?php echo Tag::numericField('price') ?>
+</p>
+<p>
+	<?php echo Tag::submitButton("追加") ?>
+</p>
 </form>
-</div>
